@@ -13,7 +13,7 @@ public class Voluntario {
 	
 	@Id
 	@GeneratedValue(generator="uuid")
-	@GenericGenerator(name="uuid",strategy="voluntario")
+	@GenericGenerator(name="uuid",strategy="uuid2")
 	private String id;
 	private String nombre;
 	private String apellido;

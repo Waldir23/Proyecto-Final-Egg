@@ -14,7 +14,7 @@ public class Proveedor {
 	
 	@Id
 	@GeneratedValue(generator= "uuid")
-	@GenericGenerator(name = "uuid", strategy="proveedor")
+	@GenericGenerator(name = "uuid", strategy="uuid2")
 	private String id;
 	private String email;
 	private String clave;
