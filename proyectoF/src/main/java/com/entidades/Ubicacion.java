@@ -11,7 +11,7 @@ public class Ubicacion {
 	
 	@Id
 	@GeneratedValue(generator="uuid")
-	@GenericGenerator(name="uuid", strategy="Ubicacion")
+	@GenericGenerator(name="uuid", strategy="uuid2")
 	private String id;
 	private double latitud;
 	private double longitud;

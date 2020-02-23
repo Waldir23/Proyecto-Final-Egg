@@ -11,9 +11,10 @@ import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 public class Evento {
+	
 	@Id
 	@GeneratedValue(generator="uuid")
-	@GenericGenerator(name="uuid", strategy="evento")
+	@GenericGenerator(name="uuid", strategy="uuid2")
 	private String id;
 	private Date fechaHora;
 	private String descripcion;

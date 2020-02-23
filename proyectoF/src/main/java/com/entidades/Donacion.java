@@ -12,7 +12,7 @@ public class Donacion {
 
 	@Id
 	@GeneratedValue(generator="uuid")
-	@GenericGenerator(name="uuid", strategy="donacion")
+	@GenericGenerator(name="uuid", strategy="uuid2")
 	private String id;
 	
 	@ManyToOne
