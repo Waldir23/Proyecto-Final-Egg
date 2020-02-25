@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -19,11 +21,18 @@ public class Cliente {
 	private String id;
 	private String email;
 	private String clave;
+	
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date alta;
+	
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date baja;
 	
 	@OneToOne
 	private Ubicacion ubicacion;
+	
+//	@ManyToMany //ver si se hace una entidad intermedia (Favorito)
+//	private Proveedor favoritos;
 	
 	public String getId() {
 		return id;

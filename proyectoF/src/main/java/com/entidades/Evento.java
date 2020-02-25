@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -18,6 +19,12 @@ public class Evento {
 	private String id;
 	private Date fechaHora;
 	private String descripcion;
+	
+	@OneToOne //ver si se cambia a @OneToMany si el evento es en distintas ubicaciones
+	private Ubicacion ubicacion;
+	
+	@ManyToOne
+	private Proveedor proveedores;
 
 	public String getId() {
 		return id;

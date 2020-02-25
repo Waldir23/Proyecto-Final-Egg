@@ -32,14 +32,12 @@ public class ClienteServicio implements UserDetailsService{
 	@Autowired
 	private ClienteRepositorio cR;
 	
-	@Autowired
-	private ProveedorRepositorio pR;
-	
-	@Autowired
-	private ProveedorServicio pS;
-	
-	@Autowired
-	private UbicacionRepositorio uR;
+////	Depende de como se maneje el metodo agregarFavoritos se van a usar estos @Autowired o no
+//	@Autowired
+//	private ProveedorRepositorio pR;
+//	
+//	@Autowired
+//	private ProveedorServicio pS;
 	
 	@Autowired
 	private UbicacionServicio uS;
@@ -76,6 +74,16 @@ public class ClienteServicio implements UserDetailsService{
 			cR.save(cliente);
 		}
 	}
+	
+//	@Transactional
+//	public void agregarFavoritos(String idCliente, String idFavorito) {
+//		Optional<Cliente> resp= cR.findById(idCliente);
+//		if(resp.isPresent()) {
+//			Cliente cliente=resp.get();
+////			cliente.set?() va a depender de como se maneje la relacion de los proveedores favoritos
+//			cR.save(cliente);
+//		}
+//	}
 
 	@Transactional
 	public void eliminar(String idCliente){
@@ -99,17 +107,18 @@ public class ClienteServicio implements UserDetailsService{
 	}
 
 	private void validar() {
-		
+		//no se si las validaciones se van a hacer en el back
+		//o en el front con Javascript
 	}
 
 	@Override
-	public UserDetails loadUserByUsername(String mail) throws UsernameNotFoundException {
-		Cliente cliente=cR.buscarPorMail(mail);
+	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+		Cliente cliente=cR.buscarPorEmail(email);
 		if (cliente !=null) {
 			List<GrantedAuthority> permisos= new ArrayList<GrantedAuthority>();
-			permisos.add(new SimpleGrantedAuthority("ROL_CLIENTE_REGISTRADO"));
+			permisos.add(new SimpleGrantedAuthority("ROLE_CLIENTE_REGISTRADO"));
 			HttpSession sesion= ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest().getSession(true);
-			sesion.setAttribute("usuarioSesion", cliente);
+			sesion.setAttribute("clienteSesion", cliente);
 			return  new User(cliente.getEmail(),cliente.getClave(), permisos);
 		} else {
 			return null;

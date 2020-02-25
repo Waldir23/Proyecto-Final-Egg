@@ -5,6 +5,7 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -20,6 +21,12 @@ public class Voluntario {
 	private String email;
 	private int celular;
 	private Date diasDisponibles;
+	
+	@ManyToOne
+	private Evento eventos;
+	
+	@ManyToOne
+	private Proveedor proveedores;
 	
 	public String getId() {
 		return id;

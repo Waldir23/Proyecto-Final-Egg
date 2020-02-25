@@ -16,6 +16,12 @@ public class Mensaje {
 	private String id;
 	private String contenido;
 	
+	@ManyToOne
+	private Evento eventos;
+	
+	@ManyToOne
+	private Proveedor proveedores;
+	
 	public String getId() {
 		return id;
 	}

@@ -17,5 +17,26 @@ public class Donacion {
 	
 	@ManyToOne
 	private Evento eventos;
-	//cuando este hecho el form de las donaciones le agregamos mas atributos
+
+	@ManyToOne
+	private Proveedor proveedores;
+	//cuando este hecho el form de las donaciones agregamos los atributos que hagan falta
+
+	public Evento getEventos() {
+		return eventos;
+	}
+
+	public void setEventos(Evento eventos) {
+		this.eventos = eventos;
+	}
+
+	public Proveedor getProveedores() {
+		return proveedores;
+	}
+
+	public void setProveedores(Proveedor proveedores) {
+		this.proveedores = proveedores;
+	}
+	
+	
 }
