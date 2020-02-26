@@ -22,16 +22,23 @@ public class Mensaje {
 	@ManyToOne
 	private Proveedor proveedores;
 	
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
 	public String getContenido() {
 		return contenido;
 	}
 	public void setContenido(String contenido) {
 		this.contenido = contenido;
 	}
+	public Evento getEventos() {
+		return eventos;
+	}
+	public void setEventos(Evento eventos) {
+		this.eventos = eventos;
+	}
+	public Proveedor getProveedores() {
+		return proveedores;
+	}
+	public void setProveedores(Proveedor proveedores) {
+		this.proveedores = proveedores;
+	}
+	
 }

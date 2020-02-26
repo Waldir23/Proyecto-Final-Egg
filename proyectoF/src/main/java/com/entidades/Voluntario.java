@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -20,6 +22,8 @@ public class Voluntario {
 	private String apellido;
 	private String email;
 	private int celular;
+	
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date diasDisponibles;
 	
 	@ManyToOne
@@ -28,12 +32,6 @@ public class Voluntario {
 	@ManyToOne
 	private Proveedor proveedores;
 	
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
 	public String getNombre() {
 		return nombre;
 	}
@@ -64,5 +62,18 @@ public class Voluntario {
 	public void setDiasDisponibles(Date diasDisponibles) {
 		this.diasDisponibles = diasDisponibles;
 	}
+	public Evento getEventos() {
+		return eventos;
+	}
+	public void setEventos(Evento eventos) {
+		this.eventos = eventos;
+	}
+	public Proveedor getProveedores() {
+		return proveedores;
+	}
+	public void setProveedores(Proveedor proveedores) {
+		this.proveedores = proveedores;
+	}
+	
 	
 }

@@ -7,11 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
-<<<<<<< HEAD
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-=======
->>>>>>> refs/remotes/origin/master
 
 import org.hibernate.annotations.GenericGenerator;
 
