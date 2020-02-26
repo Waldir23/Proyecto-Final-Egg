@@ -43,6 +43,8 @@ public class MensajeServicio {
 		} else {
 			if (entidadDonada.equals(Evento.class)) {
 				resp=eR.findById(idForanea);
+			}else {
+//				Falta ErrorServicio
 			}
 		}
 		if (resp.isPresent()) {
@@ -60,4 +62,11 @@ public class MensajeServicio {
 		}
 	}
 	
+	@Transactional
+	public void eliminar(String idMensaje) {
+		Optional<Mensaje> resp= mR.findById(idMensaje);
+		if(resp.isPresent()) {
+			mR.delete(resp.get());
+		}
+	}
 }

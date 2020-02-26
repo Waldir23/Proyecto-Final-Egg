@@ -1,5 +1,6 @@
 package com.servicios;
 
+import java.util.Date;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,7 @@ public class VoluntarioServicio {
 	private EventoRepositorio eR;
 	
 	@Transactional
-	public void guardar(String idForanea,String nombre,String apellido, String email, int celular, Class entidadDonada) {
+	public void guardar(String idForanea,String nombre,String apellido, String email, int celular,Date diasDisponibles, Class entidadDonada) {
 		Optional resp=null;
 		if (entidadDonada.equals(Proveedor.class)) {
 			resp=pR.findById(idForanea);
@@ -44,7 +45,7 @@ public class VoluntarioServicio {
 			voluntario.setCelular(celular);
 			voluntario.setEmail(email);
 			voluntario.setNombre(nombre);
-//			voluntario.setDiasDisponibles(diasDisponibles);
+			voluntario.setDiasDisponibles(diasDisponibles);
 			if(resp.getClass().equals(Proveedor.class)) {
 				voluntario.setProveedores((Proveedor)resp.get());
 			}			
@@ -54,6 +55,28 @@ public class VoluntarioServicio {
 			vR.save(voluntario);
 		} else {
 //			Falta hacer ErrorServicio
+		}
+	}
+	
+	@Transactional
+	public void modificar(String idVoluntario,String nombre,String apellido, String email, int celular,Date diasDisponibles) {
+		Optional<Voluntario> resp= vR.findById(idVoluntario);
+		if(resp.isPresent()) {
+			Voluntario voluntario=resp.get();
+			voluntario.setApellido(apellido);
+			voluntario.setCelular(celular);
+			voluntario.setEmail(email);
+			voluntario.setNombre(nombre);
+			voluntario.setDiasDisponibles(diasDisponibles);
+			vR.save(voluntario);
+		}
+	}
+	
+	@Transactional
+	public void eliminar(String idVoluntario) {
+		Optional<Voluntario> resp= vR.findById(idVoluntario);
+		if(resp.isPresent()) {
+			vR.delete(resp.get());
 		}
 	}
 }

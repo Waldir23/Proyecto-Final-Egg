@@ -49,4 +49,21 @@ public class Evento {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+
+	public Ubicacion getUbicacion() {
+		return ubicacion;
+	}
+
+	public void setUbicacion(Ubicacion ubicacion) {
+		this.ubicacion = ubicacion;
+	}
+
+	public Proveedor getProveedores() {
+		return proveedores;
+	}
+
+	public void setProveedores(Proveedor proveedores) {
+		this.proveedores = proveedores;
+	}
+	
 }

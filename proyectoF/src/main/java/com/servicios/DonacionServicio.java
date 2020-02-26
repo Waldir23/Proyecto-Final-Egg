@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.entidades.Donacion;
 import com.entidades.Evento;
+import com.entidades.Mensaje;
 import com.entidades.Proveedor;
 import com.repositorios.DonacionRepositorio;
 import com.repositorios.EventoRepositorio;
@@ -51,4 +52,21 @@ public class DonacionServicio {
 		}
 	}
 	
+	@Transactional
+	public void modificacion(String idDonacion) {
+		Optional<Donacion> resp= dR.findById(idDonacion);
+		if(resp.isPresent()) {
+			Donacion donacion=resp.get();
+//			agregar los setters segun los atributos de Donacion
+			dR.save(donacion);
+		}
+	}
+	
+	@Transactional
+	public void eliminar(String idDonacion) {
+		Optional<Donacion> resp= dR.findById(idDonacion);
+		if(resp.isPresent()) {
+			dR.delete(resp.get());
+		}
+	}
 }

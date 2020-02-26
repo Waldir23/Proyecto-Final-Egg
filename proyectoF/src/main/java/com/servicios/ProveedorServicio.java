@@ -21,6 +21,7 @@ import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import com.entidades.Donacion;
+import com.entidades.Evento;
 import com.entidades.Mensaje;
 import com.entidades.Proveedor;
 import com.entidades.Ubicacion;
@@ -37,6 +38,9 @@ public class ProveedorServicio implements UserDetailsService{
 	
 	@Autowired
 	private MensajeServicio mS;
+	
+	@Autowired
+	private EventoServicio eS;
 	
 	@Autowired
 	private UbicacionServicio uS;
@@ -110,17 +114,25 @@ public class ProveedorServicio implements UserDetailsService{
 		Optional<Proveedor> resp= pR.findById(idProveedor);
 		if(resp.isPresent()) {
 			Proveedor proveedor=resp.get();
-			dS.guardar(idProveedor, Proveedor.class);
+			dS.guardar(proveedor.getId(), proveedor.getClass());
 		}
 	}
 	
 	@Transactional
-	public void agregarMensaje(String idProveedor,Mensaje mensajeP) {
+	public void agregarMensaje(String idProveedor,String contenido) {
 		Optional<Proveedor> resp= pR.findById(idProveedor);
 		if(resp.isPresent()) {
 			Proveedor proveedor=resp.get();
-			Mensaje mensaje= mS.guardar(mensajeP, idProveedor);
-			pR.save(proveedor);
+			mS.guardar(proveedor.getId(),contenido, proveedor.getClass());
+		}
+	}
+	
+	@Transactional
+	public void agregarEvento(String idProveedor) {
+		Optional<Proveedor> resp= pR.findById(idProveedor);
+		if(resp.isPresent()) {
+			Proveedor proveedor=resp.get();
+//			eS.guardar(proveedor.getId(), proveedor.getClass());
 		}
 	}
 	
