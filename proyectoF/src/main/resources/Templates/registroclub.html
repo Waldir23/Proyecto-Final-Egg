@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Voluntarios registro</title>
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+   <link href="https://fonts.googleapis.com/css?family=Hind:400,500,600,700|Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+      <link href="estilos.css" rel="stylesheet">
+
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Voluntarios.html">Voluntarios</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="Donaciones.html">Donaciones</a>
+      </li>
+     
+    </ul>
+  </div>
+</nav>
+
+
+<article class="p-register">
+    <section class="container grid centered">
+      <div class="row">
+        <div class="col col-xsmall-9 col-small-7 col-medium-5">
+            <div class="form-container">
+<form class="show-inline-validation js-register-form" method="post">
+    <div class="field-container">
+        <h1 class="h5 contextual-field js-contextual-field active" data-context="default" style="display: block;">Login</h1>
+<div class="field-wrap js-field-wrap">
+    <label class="field-label" for="FirstName">Nombre del establecimiento</label>   
+                   <div class="inline-validation-wrap"><input type="text" class="first-name required js-field" id="FirstName" name="FirstName"  placeholder="nombre" useinlinevalidation="1" tabindex="0" /></div>    
+</div>              
+
+  <div class="field-wrap js-field-wrap">
+    <label class="field-label" for="LastName">Dirección</label>                 
+     <div class="inline-validation-wrap"><input type="text" class="address-name required js-field" id="address" name="address"placeholder="dirección" useinlinevalidation="1" tabindex="0" /></div>        
+                          </div>
+
+  <div class="field-wrap js-field-wrap">
+    <label class="field-label" for="address[phone]">
+        Email
+    </label>                  
+    <div class="inline-validation-wrap"><input type="tel" class="phone required js-field" id="address[phone]" name="address[phone]" autocomplete="tel" placeholder="email" useinlinevalidation="1" tabindex="0" /></div>                            
+ </div>
+
+ <div class="field-wrap js-field-wrap">
+    <label class="field-label" for="address[phone]">Clave de registro municipal</label>                  
+    <div class="inline-validation-wrap"><input type="tel" class="phone required js-field" id="address[phone]" name="address[phone]" autocomplete="tel" placeholder="numero de habilitación" useinlinevalidation="1" tabindex="0" /></div>                            
+ </div>
+ <div class="field-wrap">
+        <button class="button button-small button-primary-default form-submit-btn js-submit-btn" type="submit">Log in</button>
+      </div>
+    </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ </section>
+ </article>
+</body>
+</html>
