@@ -13,6 +13,7 @@ public class UbicacionServicio {
 	private UbicacionRepositorio r;
 
 	public Ubicacion guardar(Ubicacion domicilio) {
-		return null;
+		r.save(domicilio);
+		return domicilio;
 	}
 }
