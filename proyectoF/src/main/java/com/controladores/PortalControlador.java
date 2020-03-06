@@ -37,4 +37,9 @@ public class PortalControlador {
 	public String Eventos() {
 		return "eventos.html";
 	}
+	
+	@GetMapping("/luciano")
+	public String Luciano() {
+		return "luciano.html";
+	}
 }
