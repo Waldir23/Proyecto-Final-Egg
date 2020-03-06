@@ -1,0 +1,266 @@
+header{
+margin:.5vw;
+font-size: 0;
+display: -ms-flexbox;
+-ms-flex-wrap:wrap;
+-ms-flex-direction:column;
+-webkit-flex-flow: row wrap;
+flex-flow: row wrap;
+display:-webkit-box;
+display:flex;
+}
+header div{
+	-webkit-box-flex:auto;
+	-ms-flex:auto;
+	flex:auto;
+	width: 200px;
+	margin: .5vw;
+}
+header div img{
+	width: 100%;
+	height: auto;
+
+}
+
+@media screen and (max-width: 400px){
+	header div{
+		margin:0;
+	}
+	header{
+	padding: 0;
+}
+}
+
+
+p{
+	font-family: 'Hind', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+h5{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+}
+
+
+.cid-qKSGEV70WT .card3 {
+    background: linear-gradient(45deg, #ff4f7b, #ff695c);
+}
+.cid-qKSGEV70WT .wrapper {
+    padding: 2rem;
+    box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.1);
+    border-radius: .25rem;
+}
+.cid-qKSGEV70WT .card2 {
+    background: linear-gradient(45deg, #188ef4, #306de8);
+}
+
+.cid-qKSGEV70WT .card1 {
+    background: linear-gradient(45deg, #2bdc9d, #1dc9cb);
+}
+
+@media (max-width: 991px)
+.cid-qKSGEV70WT .wrapper {
+    margin-bottom: 5rem;
+}
+.text-white {
+    color: #ffffff !important;
+}
+
+.btn-underline {
+    padding: .5rem;
+    display: inline-flex;
+    font-weight: 400;
+    align-items: center;
+    position: relative;
+    transition: all .3s;
+}
+.display-4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.cid-qKSGEV70WT .mbr-card-title {
+    padding-bottom: 1rem;
+}
+.display-5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+}
+.align-left {
+    text-align: left;
+}
+.mbr-white {
+    color: #ffffff;
+}
+
+
+.cid-qKSGEV70WT .mbr-text {
+    margin: 0;
+    color: #efefef;
+}
+
+.btn-underline {
+    padding: .5rem;
+    display: inline-flex;
+    font-weight: 400;
+    align-items: center;
+    position: relative;
+    transition: all .3s;
+}
+
+
+a.button, input.button, button.button {
+    cursor: pointer;
+    display: inline-block;
+    font: 600 15px/21px 'Hind', sans-serif;
+    margin: 0;
+    min-width: 130px;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .2s,border .2s,color .2s;
+    width: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+form button.form-submit-btn, form .form-submit-btn {
+    display: block;
+    margin: 15px auto 0;
+    min-width: 150px;
+    width: 100%;
+}
+
+a.button-primary-default, input.button-primary-default, button.button-primary-default {
+    background-color: #30aabc;
+    border: 2px solid #30aabc;
+    color: #fff;
+}
+
+
+element.style {
+    display: block;
+}
+.p-register .default-only {
+    display: none;
+}
+@media only screen and (min-width: 800px)
+h5, .h5 {
+    font-size: 1.25rem;
+}
+
+ h5, .h5{
+    color: #03363d;
+    font-weight: 600;
+    font-family: 'Hind';
+    line-height: calc(1em + 8px);
+    font-size: 1.125rem;
+}
+
+
+@media only screen and (min-width: 800px)
+.p-register .form-container {
+    padding: 4.5rem 4.5rem 6rem;
+}
+.p-register .form-container {
+    width: 60%;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(102,102,102,.15);
+    padding: 2.5rem 2.5rem 6rem;
+}
+.grid .col>* {
+    max-width: 100%;
+}
+
+
+form input:not(.field-error-active):hover, form select:not(.field-error-active):hover, form textarea:not(.field-error-active):hover, form .dropdown-field:not(.field-error-active):hover {
+    border: 1px solid #30aabc;
+}
+
+form input:not([type=checkbox]) {
+    background: #fcfdfd;
+    border-radius: 3px;
+    border: 1px solid rgba(3,54,61,.25);
+    box-shadow: none;
+    color: rgba(17,51,56,.73);
+    font: 16px/1 "Proxima Nova",Arial,sans-serif;
+    height: 50px;
+    padding: 20px 15px;
+    width: 100%;
+}
+form * {
+    box-sizing: border-box;
+}
+@media only screen and (min-width: 800px)
+.grid .col.col-small-7 {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 58.3333333333%;
+}
+@media only screen and (min-width: 480px)
+.grid .col.col-xsmall-9 {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: 75%;
+}
+.grid.centered .col {
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.grid .col {
+    position: relative;
+    padding: 8px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 100%;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 800px)
+h1, .h1 {
+    font-size: 3.5rem;
+}
+h1, .h1 {
+    font-size: 2.5rem;
+}
+
+
+.js-contextual-field{
+text-transform: uppercase;
+font-family: 'Hind';
+
+}
+
+
+ .cuentanueva{
+    position: absolute;
+    left: 10%;
+    bottom: 2rem;
+    width: 80%;
+    text-align: center;
+}
+
+h6{
+    font-size: 14px;
+}
+
+
+
+
