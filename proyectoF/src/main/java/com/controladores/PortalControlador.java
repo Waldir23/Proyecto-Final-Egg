@@ -15,6 +15,26 @@ public class PortalControlador {
 	
 	@GetMapping("/registro")
 	public String Registro() {
-		return "registroclub.html";
+		return "registro.html";
+	}
+	
+	@GetMapping("/login")
+	public String Logi() {
+		return "registro.html";
+	}
+	
+	@GetMapping("/donaciones")
+	public String Donaciones() {
+		return "donaciones.html";
+	}
+	
+	@GetMapping("/voluntarios")
+	public String Voluntarios() {
+		return "voluntarios.html";
+	}
+	
+	@GetMapping("/eventos")
+	public String Eventos() {
+		return "eventos.html";
 	}
 }
